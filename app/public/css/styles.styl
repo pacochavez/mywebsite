@@ -1,0 +1,161 @@
+@import('nib')
+@import('colors')
+@import('animate')
+body
+	background white
+	color gris_oscuro
+	.wrapper
+		padding 15px	
+		header
+			border-bottom solid 1px gris_medio
+			figure
+				text-align center
+				padding 0px
+				margin 0px
+			nav
+				text-align center
+				h1
+					font-weight normal
+					font-size 1em
+					display inline-block
+					vertical-align middle
+					margin 0px
+					margin-bottom 10px
+				ul
+					display inline-block
+					list-style none
+					padding 0px
+					margin 0px
+					text-align center
+					vertical-align middle
+					li
+						display inline-block
+						margin 0px 5px
+						a
+							font-size 1.3em
+							display block
+							color gris_oscuro
+							text-decoration none
+							border-bottom 5px solid transparent
+							padding-bottom 6px
+							&:hover,&.active
+								border-bottom 5px solid verde
+								color gris_remarcado
+		.container
+			.pane-right
+				section
+					text-align center
+					&.paco
+						.imagen-paco
+							width 150px
+							height 150px
+							border-radius 75px
+							overflow hidden
+							display inline-block
+							img 
+								width 100%
+					&.skills
+						background white
+						article
+							padding-bottom 10px
+							border-bottom solid 1px gris_medio
+							margin-bottom 10px;
+							text-align left
+							i,h4
+								margin 0px
+								display inline-block
+								vertical-align middle
+							i
+								font-size 1.2em
+								width 50px
+								height 50px
+								background gris_oscuro
+								color white
+								border-radius 25px
+								text-align center
+								&::after
+									content ""
+									height 100%
+									vertical-align middle
+									display inline-block								
+								&::before
+									vertical-align middle
+							& > div
+								display block
+								p 
+									display inline-block
+									width 30%
+									margin 0px
+									vertical-align middle
+								.progres-bar
+									display inline-block
+									width 65%
+									background gris_medio
+									height 1em
+									border-radius 1em
+									overflow hidden
+									vertical-align middle
+									span
+										border-radius 1em
+										background verde
+										height 100%
+										display block
+										&._50_percent
+											width 50%
+										&._60_percent
+											width 60%
+										&._70_percent
+											width 70%
+										&._80_percent
+											width 80%
+										&._90_percent
+											width 90%
+										&._100_percent
+											width 100%
+			.main
+				&.pane-left
+					padding 0 0 15px 0
+					border-bottom solid 1px gris_medio
+					margin-bottom 15px
+					section
+						article
+							text-align center
+							&:nth-child(odd)
+								.year
+									background verde
+									&::after
+										border-bottom  17px solid verde
+									&::before
+										border-top  17px solid verde
+							.year
+								display inline-block
+								background gris_oscuro
+								color white
+								position relative
+								width 60px
+								text-align center
+								padding 8px 0
+								margin-bottom 20px
+								vertical-align top							
+								&::after
+									position absolute
+									content ""
+									border solid transparent 30px
+									border-bottom  17px solid gris_oscuro
+									bottom 100%
+									left 0px
+								&::before
+									top 100%
+									left 0px
+									position absolute
+									content ""
+									border solid transparent 30px
+									border-top  17px solid gris_oscuro
+							.content
+								vertical-align top		
+								text-align left		
+								display block
+								h3
+									text-align center
+									margin-top 0px
+@import('media800')								

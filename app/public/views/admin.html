@@ -1,0 +1,85 @@
+<div>
+	<h2>Add new module</h2>
+	<form ng-submit="">
+			<input type="text" placeholder="name" ng-model="M.name">
+			<input type="text" placeholder="link" ng-model="M.link">
+			<input type="text" placeholder="locale" ng-model="M.locale">
+			<input type="text" placeholder="title" ng-model="M.title">
+			<input type="text" placeholder="type" ng-model="M.type">
+			<input type="text" placeholder="description" ng-model="M.description">
+			<input type="text" placeholder="url" ng-model="M.url">
+			<input type="text" placeholder="site_name" ng-model="M.site_name">
+			<input type="text" placeholder="section" ng-model="M.section">
+			<input type="text" placeholder="published_time" ng-model="M.published_time">
+			<input type="text" placeholder="modified_time" ng-model="M.modified_time">
+			<input type="text" placeholder="updated_time" ng-model="M.updated_time">
+			<input type="text" placeholder="image_url" ng-model="M.image_url">
+			<input type="text" placeholder="image_width" ng-model="M.image_width">
+			<input type="text" placeholder="image_height" ng-model="M.image_height">
+			<input type="text" placeholder="card_types" ng-model="M.card_types">
+			<input type="text" placeholder="twitter_creator" ng-model="M.twitter_creator">
+			<input type="submit" value="Agregar">
+			{{M}}
+	</form>
+	
+</div>
+<div>
+	<h2>Add Icons</h2>
+	<form ng-submit="" >
+			<input type="text" placeholder="name" ng-model="I.name">
+			<input type="submit" value="Agregar">
+	</form>
+	
+</div>
+<div>
+	<h2>Add Social Media</h2>
+	<form ng-submit="" >
+			<input type="text" placeholder="network" ng-model="S.network">
+			<input type="text" placeholder="link" ng-model="S.link">
+			<input type="text" placeholder="username" ng-model="S.username">
+			<input type="submit" value="Agregar">
+	</form>
+	
+</div>
+<div>
+	<h2>Timeline</h2>
+	<form ng-submit="submit(T,1)" >
+			<input type="number" placeholder="year" ng-model="T.year" required min="1900" max="3000">
+			<span ng-init="T.form = 'T'"></span>
+			<span ng-init="T.descriptions =[]"></span>	
+			<input type="submit" value="Agregar">
+			{{T}}
+	</form>
+	
+</div>
+<div>
+
+	<h2>add history</h2>
+	<form ng-submit="submit(H,2)" >
+			
+			<div>
+				select a year
+				<ul>
+					<li ng-repeat="date in years | orderBy:'-year'" data-year="{{date._id}}" ng-click="selectYear(date.year,date._id)">
+						{{date.year}}
+					</li>
+				</ul>
+			</div>
+			<input type="text" placeholder="icon" ng-model="H.send.$push.descriptions.icon">
+			<input type="text" placeholder="title" ng-model="H.send.$push.descriptions.title">
+			<input type="text" placeholder="history" ng-model="H.send.$push.descriptions.history">
+			<input type="submit" value="Agregar">
+			{{H}}
+	</form>
+	
+</div>
+
+<div>
+	<h2>add skill</h2>
+	<form ng-submit="" >
+
+			<input type="submit" value="Agregar">
+	</form>
+	
+</div>
+

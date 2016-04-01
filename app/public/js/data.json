@@ -1,0 +1,92 @@
+{
+	"timeline":	[
+		{"year":"2016","descriptions":
+			[{"icon":"keyboard-o","description":"I'm still working for IBALPE, since October 2010"}]
+		},
+
+		{"year":"2015","descriptions":
+			[
+				{"icon":"credit-card","description":"I worked in the online payment services of a local school"},
+				{"icon":"car","description":"Return to live in Guaymas"},
+				{"icon":"frown-o","description":"I said good bye to \"Grupo ArHe\" one of the best and largest companies in Mazatlán"},
+				{"icon":"share-alt","description":"Taught a course  to AngularJS to the ArHe's development team"},
+				{"icon":"paint-brush","description":"Design and Frontend development of management software for all the company"},
+				{"icon":"car","description":"I did a full stack development to autocentercosta.com  and its own CMS"},
+				{"icon":"desktop","description":"I made other websites as academiadebeisbol.com, deportesguerrero.com, grupoarhe.mx"},
+				{"icon":"wordpress","description":"I have created multiple plugins for WordPress, including standing and Linescore in real time, using AngularJS"},
+				{"icon":"list","description":"multiple landing pages"}
+			]
+		},
+		{"year":"2014","descriptions":
+			[
+				{"icon":"heart","description":"I got married with the most interesting, beautiful and lovely woman of the world :')"},
+				{"icon":"desktop","description":"I created  a web application width nodejs for upload the photos"},
+				{"icon":"expand","description":"I made a  responsive website for inviting family and friends to our wedding" }
+			]
+		}
+	],
+	"skills":[
+		{"description":"educación", "icon":"institution",
+			"habilidades":[
+				{"description":"Ingenieria en diseño grafico digital - itesus", "porcentaje":"90"}	
+			]
+		},
+		{"description":"desarrollo web", "icon":"code",
+			"habilidades":[
+				{"description":"html5", "porcentaje":"100"},
+				{"description":"css", "porcentaje":"100"},
+				{"description":"php", "porcentaje":"90"},
+				{"description":"wordpress", "porcentaje":"90"},
+				{"description":"magento", "porcentaje":"80"},
+				{"description":"javascript", "porcentaje":"100"},
+				{"description":"nodejs", "porcentaje":"80"},
+				{"description":"express", "porcentaje":"80"},
+				{"description":"socket io", "porcentaje":"80"},
+				{"description":"Angularjs", "porcentaje":"100"},
+				{"description":"jquery", "porcentaje":"100"}
+			]
+		},
+		{"description":"bases de datos", "icon":"database",
+			"habilidades":[
+				{"description":"mysql", "porcentaje":"90"},
+				{"description":"sqlite", "porcentaje":"80"},
+				{"description":"mongodb", "porcentaje":"50"}
+			]
+		},
+		{"description":"diseño gráfico", "icon":"paint-brush",
+			"habilidades":[
+				{"description":"UX and UI", "porcentaje":"100"},
+				{"description":"Ilustrator", "porcentaje":"80"},
+				{"description":"photoshop", "porcentaje":"50"},
+				{"description":"illustrator", "porcentaje":"50"},
+				{"description":"gimp", "porcentaje":"50"},
+				{"description":"inkscape", "porcentaje":"50"}
+			]
+		},
+		{"description":"softwares", "icon":"desktop",
+			"habilidades":[
+				{"description":"sublime text", "porcentaje":"100"},
+				{"description":"android estudio", "porcentaje":"70"},
+				{"description":"eclipse", "porcentaje":"80"},
+				{"description":"xcode", "porcentaje":"100"}
+			]
+		},
+		{"description":"control de versiones", "icon":"code-fork",
+			"habilidades":[
+				{"description":"git", "porcentaje":"100"},
+				{"description":"svn", "porcentaje":"80"},
+				{"description":"github", "porcentaje":"100"},
+				{"description":"gitlab", "porcentaje":"100"}
+			]
+		},
+		{"description":"sistemas operativos", "icon":"cogs",
+			"habilidades":[
+				{"description":"osx", "porcentaje":"90"},
+				{"description":"windows", "porcentaje":"80"},
+				{"description":"ubuntu", "porcentaje":"100"},
+				{"description":"centos", "porcentaje":"80"}
+			]
+		}
+	]
+
+}

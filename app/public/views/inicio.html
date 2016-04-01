@@ -1,0 +1,39 @@
+<div class="main pane-left">
+	<h2>About me</h2>
+	<section>
+		<article ng-repeat="timeline in result.timeline">
+			<div class="year">{{timeline.year}}</div>
+			<div class="content">
+				<p ng-class="{left:check(X) == 0}"ng-repeat="description in timeline.descriptions">
+					<i class="fa fa-{{description.icon}}"></i><br>
+					{{description.description}}
+				</p>
+			</div>
+		</article>
+	</section>
+</div
+><div class="pane-right">
+	<section class="paco">
+		<div class="imagen-paco">
+			<img src="img/paco-chavez-garibay.jpg" alt="Jose Francisco Chavez Garibay - Paco Chavez ">	
+			
+		</div>
+		<h3>José Francisco Chávez Garibay</h3>
+		<p>
+			Hi I'm Paco Chávez web developer and UI designer, a truttl
+		</p>
+	</section>
+	<section class="skills">
+		<h3>Experiencia y Habilidades</h3>
+		<article ng-repeat="skill in result.skills">
+			<i class="fa fa-{{skill.icon}}"></i>
+			<h4>{{skill.description | capitalize}}</h4>
+			<div ng-repeat="habilidad in skill.habilidades">
+				<p>{{habilidad.description | capitalize}}</p> 
+				<div class="progres-bar">
+					<span class="_{{habilidad.porcentaje}}_percent"></span>
+				</div>
+			</div>
+		</article>
+	</section>
+</div>

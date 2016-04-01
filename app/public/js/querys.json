@@ -1,0 +1,27 @@
+db.students.update(
+   { name: "joe" },
+   { $push: { scores: { $each: [ 90, 92, 85 ] } } }
+)
+
+
+
+
+
+
+
+About_me
+//create timeline
+
+//add new year
+db.timeline.insert({_id:2016,year:2016,description:[]})
+
+// we add new activities
+
+db.timeline.update({_id:2016},{$push:{description:{icon:"credit-card",title:"Paymant online services",history:"I worked in the online payment services of a local school"}}})
+
+
+
+
+MainModules
+
+db.main_modules.insert({_id:"about-me",name:"about me",link:"about-me"})

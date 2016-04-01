@@ -1,0 +1,114 @@
+//esttructura de los modulos
+modulos:[
+	{
+		name:"name",
+		link:"name",
+		locale:"es_ES",
+		title:"title"
+		type:"article,website"
+		description:"",
+		url:"",
+		site_name
+		section
+		published_time
+		modified_time
+		updated_time
+		image_url
+		image_width
+		image_height
+		card_types
+		twitter_creator
+	}
+]
+
+//Lista de iconos
+icons_list[
+	{
+		_id,
+		name,
+	}
+]
+
+// social mierda
+	{
+		_id,
+		name,
+		link
+	}
+//
+
+Articulos Blog:{
+	{
+	titulo:
+	image:
+	contenido_post:
+	locale:"es_ES",
+	title:"title"
+	type:"article,website"
+	description:"",
+	url:"",
+	site_name
+	section
+	published_time
+	modified_time
+	updated_time
+	image_url
+	image_width
+	image_height
+	card_types
+	twitter_creator
+
+	}
+}
+
+//timeline
+timeline:[
+	{
+		year:,
+		description:[
+			{
+			icon:,
+			title,
+			history
+			}
+		]
+	}
+]
+skills:[
+	{
+		type:
+		icon:
+		skill:[
+			{
+			name:,
+			percent_experience,
+			}
+
+		]
+
+	 }
+]
+
+short_description:{
+	name:,
+	description:,
+	picture:{
+		url:
+		alt_img:
+	}
+
+}
+
+
+
+
+db.timeline.update({year:2016},{$pull:{description:{icon:"credit-card"}}})
+
+
+db.timeline.update({ year: 2016 },{ $unset: {description:{icon:"credit-card" }}})
+db.timeline.update({ year: 2016 },{ $unset: {icon:"credit-card"}})
+
+db.timeline.find().pretty();
+db.timeline.update({ year: 2016 },{$push:{description:{icon : "credit-card",title : "Paymant online services",history: "I worked in the online payment services of a local school"}}});
+
+db.timeline.update({ year: 2016 },{$push:{description:{icon : "hola",title : "Paymant online services",history: "I worked in the online payment services of a local school"}}});
