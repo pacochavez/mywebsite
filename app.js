@@ -13,8 +13,11 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/app/public'));
 
 app.get('/admin', modulos.home);
+app.get('/portfolio', modulos.home);
+app.get('/contact', modulos.home);
 app.get('/data/:data',modulos.findAll)
-app.get('/home', modulos.home);
+app.get('/', modulos.home);
+app.get('/about-me', modulos.home);
 app.get('/modulos', modulos.findAll);
 app.get('/modulos/:id', modulos.findById);
 app.post('/modulos', modulos.addModulo);

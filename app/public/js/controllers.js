@@ -1,26 +1,22 @@
 (function (){
   angular.module('biografia.controllers', [])
     .controller('MainController', ['$http', '$scope','$location','$stateParams', function ($http,$scope,$location,$stateParams) {
-      if($scope.result== undefined){
-        $http.get('/js/data.json').then(
+   // if($scope.result == undefined){
+        // $http.get('/js/data.json').then(
+        //   function(data){
+        //     $scope.result = data.data;
+        //     console.log(data)
+        //   },
+        //   function(data){})
+        $http.get('/data/modulos').then(
           function(data){
-            $scope.result = data.data;
-            console.log(data)
-          },
-          function(data){})
-         $http.get('/data/year').then(
-          function(data){
-            $scope.years = data.data;
+            $scope.modules = data.data;
             console.log(data)
           },
           function(data){})
           
         
-      }
-    $scope.M ={name:"",link:""}
-    $scope.$watch('M.name', function() {
-        $scope.M.link = $scope.M.name.toLowerCase().replace(/\s+/g,'-');
-    }); 
+     // }
     $scope.X = 1;
     $scope.check =function(x){
       if(x == 1){x=0;}else{x=1;}
@@ -30,14 +26,45 @@
      
 
     }])
-    .controller('SubmitController',['$scope','addServices',function($scope,addServices){
+    .controller('SubmitController',['$http','$scope','addServices',function($http,$scope,addServices){
+           $http.get('/data/year').then(
+          function(data){
+            $scope.years = data.data;
+            console.log(data)
+          },
+          function(data){})
+          $http.get('/data/icons').then(
+          function(data){
+            $scope.icons = data.data;
+            console.log(data)
+          },
+          function(data){})
+          $http.get('/data/networks').then(
+          function(data){
+            $scope.networks = data.data;
+            console.log(data)
+          },
+          function(data){})
+
             $scope.H={year:'',url:'',form:'T',id:{year:''}};
+            $scope.M ={send:{name:"",link:""}}
+            $scope.$watch('M.send.name', function() {
+                $scope.M.send.link = $scope.M.send.name.toLowerCase().replace(/\s+/g,'-');
+            });
+
         $scope.selectYear=function(y,id){
             $scope.H.url = id;
             $scope.H.year = y;
-            $scope.H._id.year =y;
-
+            $scope.H.id.year =y;
         }
+        $scope.postmodulo =function(M){
+          
+          M.send.published_time = new Date();
+          M.send.modified_time = new Date();
+          M.send.updated_time = new Date();
+          $scope.submit(M,1);
+        }        
+         
       $scope.submit = function(data,action){
         switch(action){
           case 1:
@@ -60,6 +87,26 @@
             break;
       }
     }  
-    }])
+}])
+.controller('AboutmeController',['$http','$scope',function($http,$scope){
+
+   $http.get('/data/time-line').then(function(data){
+           
+      $scope.result={};
+      $scope.result.timeline =  data.data;
+            console.log(data)
+          }, function(data){})
+          
+}])
+.controller('ContactController',['$scope',function($scope){
+
+}])
+.controller('BlogController',['$scope',function($scope){
+
+}])
+.controller('PortfolioController',['$scope',function($scope){
+
+}])
+
   
 })();

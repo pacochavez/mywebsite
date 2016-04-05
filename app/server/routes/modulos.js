@@ -8,16 +8,33 @@ var server = new Server('localhost', 27017, {auto_reconnect: true});
 
 var loadData = function(data){
     var name;
-    var    query = {};
+    var query = {};
+    var condicion = {};
     switch(data){
         case 'year':
-        name = 'timeline';
-        query[data] = 1;
-        break;
+            name = 'timeline';
+            query[data] = 1;
+            break;
+        case 'icons':
+            name = 'icons';
+            break;
+        case 'networks':
+            name = 'socialmedia';
+            break;
+        case 'modulos':
+            name = 'modules';
+            query ={name:1,link:1,active:1,order:1}
+            condicion ={active:1,status:'public'}
+            break;
+        case 'time-line':
+            name = 'timeline';
+            query ={year:1,descriptions:1,icon:1}
+            break;
     }
     return {
         name:name,
-        query: query
+        query: query,
+        condicion : condicion
     };
 }
 
@@ -55,7 +72,7 @@ exports.findAll = function(req, res) {
     var data = loadData(id);
    
     db.collection(data.name, function(err, collection) {
-         collection.find({},data.query).toArray(function(err, items) {
+         collection.find(data.condicion,data.query).toArray(function(err, items) {
              res.send(items);
          });
      });
@@ -66,8 +83,16 @@ var form_name = function(name){
     switch(name){
         case 'T':
         collection_name = 'timeline';
+        break; 
+        case 'I':
+        collection_name = 'icons';
         break;
-
+        case 'S':
+        collection_name = 'socialmedia';
+        break;
+        case 'M':
+        collection_name = 'modules';
+        break;
     }
     return collection_name;
     
@@ -75,10 +100,9 @@ var form_name = function(name){
 exports.addModulo = function(req, res) {
     var modulo = req.body;
     var name = form_name(modulo.form);
-
-     console.log('Adding Modulo: ' + JSON.stringify(modulo));
+     console.log(modulo);
     db.collection(name, function(err, collection) {
-        collection.insertOne(modulo, function(err, result) {
+        collection.insertOne(modulo.send, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
             } else {
@@ -93,7 +117,7 @@ exports.updateModulo = function(req, res) {
     var modulo = req.body;
     var name = form_name(modulo.form);    
     db.collection(name, function(err, collection) {
-        collection.update(modulo._id,modulo.send,{save:true},function(err, result) {
+        collection.update(modulo.id,modulo.send,{save:true},function(err, result) {
             if (err) {
                 console.log('Error updating Modulo: ' + err);
                 res.send({'error':'An error has occurred'});

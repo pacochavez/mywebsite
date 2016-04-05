@@ -45,12 +45,8 @@ html(ng-app='biografia',ng-controller='MainController')
 						strong Paco Ch&aacute;vez
 						|  Front-end and Back-end developer and UI designer
 					ul
-						li
-							a(ui-sref='sobre-mi', ui-sref-active='active') Sobre m&iacute;
-						li
-							a(ui-sref='portafolio', ui-sref-active='active') Portafolio
-						li
-							a(ui-sref='contacto', ui-sref-active='active') Contacto
+						li(ng-repeat="module in modules | orderBy:'order'")
+							a(ui-sref='{{module.link}}', ui-sref-active='active') {{module.name}}
 			.container
 				div(ui-view='')
 		footer

@@ -1,12 +1,12 @@
 <div class="main pane-left">
 	<h2>About me</h2>
 	<section>
-		<article ng-repeat="timeline in result.timeline">
+		<article ng-repeat="timeline in result.timeline | orderBy:'-year'">
 			<div class="year">{{timeline.year}}</div>
 			<div class="content">
 				<p ng-class="{left:check(X) == 0}"ng-repeat="description in timeline.descriptions">
 					<i class="fa fa-{{description.icon}}"></i><br>
-					{{description.description}}
+					{{description.title}}
 				</p>
 			</div>
 		</article>

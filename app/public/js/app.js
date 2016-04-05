@@ -16,22 +16,25 @@
        // Or some other custom behaviour...
      }; 
    });
-   $urlRouterProvider.otherwise('/sobre-paco-chavez')
+   
     $stateProvider
         // .state('inicio', {
         //     url: '/',
-        //     templateUrl: '/views/inicio.html'
-        // })
-        .state('sobre-mi', {
-            url: '/sobre-paco-chavez',
+        //     templateUrl: '/views/inicio.html',
+        //     controller:'AboutmeController'  
+        // }) 
+        .state('about-me', {
+            url: '/about-me',
             templateUrl: '/views/inicio.html',
+            controller:'AboutmeController'
         })
-        .state('portafolio', {
-            url: '/portafolio',
+
+        .state('portfolio', {
+            url: '/portfolio',
             templateUrl: '/views/portafolio.html'
         })
-        .state('contacto', {
-            url: '/contacto',
+        .state('contact', {
+            url: '/contact',
             templateUrl: '/views/contacto.html'
         })
         .state('admin', {
@@ -39,6 +42,7 @@
             templateUrl: '/views/admin.html',
             controller:'SubmitController'
         })
+   $urlRouterProvider.otherwise('/about-me')
       $locationProvider.html5Mode(true);
         
   });

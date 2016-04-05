@@ -1,52 +1,96 @@
 <div>
-	<h2>Add new module</h2>
-	<form ng-submit="">
-			<input type="text" placeholder="name" ng-model="M.name">
-			<input type="text" placeholder="link" ng-model="M.link">
-			<input type="text" placeholder="locale" ng-model="M.locale">
-			<input type="text" placeholder="title" ng-model="M.title">
-			<input type="text" placeholder="type" ng-model="M.type">
-			<input type="text" placeholder="description" ng-model="M.description">
-			<input type="text" placeholder="url" ng-model="M.url">
-			<input type="text" placeholder="site_name" ng-model="M.site_name">
-			<input type="text" placeholder="section" ng-model="M.section">
-			<input type="text" placeholder="published_time" ng-model="M.published_time">
-			<input type="text" placeholder="modified_time" ng-model="M.modified_time">
-			<input type="text" placeholder="updated_time" ng-model="M.updated_time">
-			<input type="text" placeholder="image_url" ng-model="M.image_url">
-			<input type="text" placeholder="image_width" ng-model="M.image_width">
-			<input type="text" placeholder="image_height" ng-model="M.image_height">
-			<input type="text" placeholder="card_types" ng-model="M.card_types">
-			<input type="text" placeholder="twitter_creator" ng-model="M.twitter_creator">
-			<input type="submit" value="Agregar">
+	<h2>
+		Add new module 
+		<i 	class=" fa "
+			ng-init="show_module = false"
+			ng-class="{'fa-chevron-circle-up':show_module == true,'fa-chevron-circle-down':show_module == false}" 
+			ng-click="show_module = !show_module" 
+			>
+		</i>
+	</h2>
+	<form ng-submit="postmodulo(M)" ng-show="show_module">
+			<span ng-init="M.form = 'M'"></span>
+			<input type="text" placeholder="name" ng-model="M.send.name">
+			<input type="text" placeholder="link" ng-model="M.send.link">
+			<input type="text" placeholder="locale" ng-model="M.send.locale">
+			<input type="text" placeholder="title" ng-model="M.send.title">
+			<input type="text" placeholder="type" ng-model="M.send.type">
+			<input type="text" placeholder="status public or admin" ng-model="M.send.status">
+			<input type="text" placeholder="description" ng-model="M.send.description">
+			<input type="text" placeholder="url" ng-model="M.send.url">
+			<input type="text" placeholder="site_name" ng-model="M.send.site_name">
+			<input type="text" placeholder="section" ng-model="M.send.section">
+			
+
+			<input type="text" placeholder="image_url" ng-model="M.send.image_url">
+			<input type="text" placeholder="card_types" ng-model="M.send.card_types">
+			<input type="text" placeholder="twitter_creator" ng-model="M.send.twitter_creator">
+			<input type="submit" value="Agregar" >
 			{{M}}
 	</form>
 	
 </div>
 <div>
-	<h2>Add Icons</h2>
-	<form ng-submit="" >
-			<input type="text" placeholder="name" ng-model="I.name">
+	<h2>
+		Add Icons
+		<i 	class=" fa "
+			ng-init="show_icons = false"
+			ng-class="{'fa-chevron-circle-up':show_icons == true,'fa-chevron-circle-down':show_icons == false}" 
+			ng-click="show_icons = !show_icons" 
+			>
+		</i>
+	</h2>
+	<form ng-submit="submit(I,1)"  ng-show="show_icons">
+			<span ng-init="I.form='I'"></span>
+			<input type="text" placeholder="name" ng-model="I.send.name">
 			<input type="submit" value="Agregar">
+			<ul>
+				<li ng-repeat="icon in icons">
+					<i class="fa fa-{{icon.name}}"></i> {{icon.name}}
+				</li>
+			</ul>
 	</form>
 	
 </div>
 <div>
-	<h2>Add Social Media</h2>
-	<form ng-submit="" >
-			<input type="text" placeholder="network" ng-model="S.network">
-			<input type="text" placeholder="link" ng-model="S.link">
-			<input type="text" placeholder="username" ng-model="S.username">
+	<h2>
+		Add Social Medi
+		<i 	class=" fa "
+			ng-init="show_social = false"
+			ng-class="{'fa-chevron-circle-up':show_social == true,'fa-chevron-circle-down':show_social == false}" 
+			ng-click="show_social = !show_social" 
+			>
+		</i>
+	</h2>
+	<form ng-submit="submit(S,1)" ng-show="show_social" ng-init="S.form='S'">
+			<input type="text" placeholder="network" ng-model="S.send.network">
+			<input type="text" placeholder="link" ng-model="S.send.link">
+			<input type="text" placeholder="username" ng-model="S.send.username">
 			<input type="submit" value="Agregar">
+			{{S}}
+			<ul>
+				<li ng-repeat="network in networks">
+					<i class="fa fa-{{network.network}}"></i> {{network.network}}
+				</li>
+			</ul>
 	</form>
-	
+
 </div>
 <div>
-	<h2>Timeline</h2>
-	<form ng-submit="submit(T,1)" >
-			<input type="number" placeholder="year" ng-model="T.year" required min="1900" max="3000">
+	<h2>
+		Timeline
+		<i 	class=" fa "
+			ng-init="show_timeline = false"
+			ng-class="{'fa-chevron-circle-up':show_timeline == true,'fa-chevron-circle-down':show_timeline == false}" 
+			ng-click="show_timeline = !show_timeline" 
+			>
+		</i>
+
+	</h2>
+	<form ng-submit="submit(T,1)"ng-show="show_timeline" >
+			<input type="number" placeholder="year" ng-model="T.send.year" required min="1900" max="3000">
 			<span ng-init="T.form = 'T'"></span>
-			<span ng-init="T.descriptions =[]"></span>	
+			<span ng-init="T.send.descriptions =[]"></span>	
 			<input type="submit" value="Agregar">
 			{{T}}
 	</form>
@@ -54,8 +98,16 @@
 </div>
 <div>
 
-	<h2>add history</h2>
-	<form ng-submit="submit(H,2)" >
+	<h2>
+		add history
+		<i 	class=" fa "
+			ng-init="show_history = false"
+			ng-class="{'fa-chevron-circle-up':show_history == true,'fa-chevron-circle-down':show_history == false}" 
+			ng-click="show_history = !show_history" 
+			>
+		</i>
+	</h2>
+	<form ng-submit="submit(H,2)" ng-show="show_history" >
 			
 			<div>
 				select a year
@@ -65,7 +117,12 @@
 					</li>
 				</ul>
 			</div>
-			<input type="text" placeholder="icon" ng-model="H.send.$push.descriptions.icon">
+			<ul>
+				<li ng-repeat="icon in icons" ng-click="H.send.$push.descriptions.icon = icon.name">
+					<i class="fa fa-{{icon.name}}"></i> {{icon.name}}
+				</li>
+			</ul>
+			<span ng-init="H.form ='T'"></span>
 			<input type="text" placeholder="title" ng-model="H.send.$push.descriptions.title">
 			<input type="text" placeholder="history" ng-model="H.send.$push.descriptions.history">
 			<input type="submit" value="Agregar">
