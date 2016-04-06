@@ -20,13 +20,14 @@
 			<input type="text" placeholder="url" ng-model="M.send.url">
 			<input type="text" placeholder="site_name" ng-model="M.send.site_name">
 			<input type="text" placeholder="section" ng-model="M.send.section">
+			<input type="text" placeholder="active" ng-model="M.send.active">
+			<input type="text" placeholder="order" ng-model="M.send.order">
 			
 
 			<input type="text" placeholder="image_url" ng-model="M.send.image_url">
 			<input type="text" placeholder="card_types" ng-model="M.send.card_types">
 			<input type="text" placeholder="twitter_creator" ng-model="M.send.twitter_creator">
 			<input type="submit" value="Agregar" >
-			{{M}}
 	</form>
 	
 </div>
@@ -67,7 +68,6 @@
 			<input type="text" placeholder="link" ng-model="S.send.link">
 			<input type="text" placeholder="username" ng-model="S.send.username">
 			<input type="submit" value="Agregar">
-			{{S}}
 			<ul>
 				<li ng-repeat="network in networks">
 					<i class="fa fa-{{network.network}}"></i> {{network.network}}
@@ -92,7 +92,6 @@
 			<span ng-init="T.form = 'T'"></span>
 			<span ng-init="T.send.descriptions =[]"></span>	
 			<input type="submit" value="Agregar">
-			{{T}}
 	</form>
 	
 </div>
@@ -126,7 +125,6 @@
 			<input type="text" placeholder="title" ng-model="H.send.$push.descriptions.title">
 			<input type="text" placeholder="history" ng-model="H.send.$push.descriptions.history">
 			<input type="submit" value="Agregar">
-			{{H}}
 	</form>
 	
 </div>

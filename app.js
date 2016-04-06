@@ -25,4 +25,4 @@ app.put('/modulos/:id', modulos.updateModulo);
 app.delete('/modulos/:id', modulos.deleteModulo);
 
 app.listen(3030);
-console.log('Listening on port 3030...');
+//console.log('Listening on port 3030...');
