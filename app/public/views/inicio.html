@@ -1,7 +1,7 @@
 <div class="main pane-left">
 	<h2>About me</h2>
 	<section>
-		<article ng-repeat="timeline in result.timeline | orderBy:'-year'">
+		<article ng-repeat="timeline in All_timeline | orderBy:'-year'">
 			<div class="year">{{timeline.year}}</div>
 			<div class="content">
 				<p ng-class="{left:check(X) == 0}"ng-repeat="description in timeline.descriptions | orderBy:'order'">
@@ -20,12 +20,12 @@
 		</div>
 		<h3>José Francisco Chávez Garibay</h3>
 		<p>
-			Hi I'm Paco Chávez web developer and UI designer, a truttl
+			Hi I'm Paco Chávez, I was born in Mazatlán Sinaloa, One of the most beutiful places in mexico, I am passionate Interface design n and everything about javascript, Front-end, cooking and the beach.
 		</p>
 	</section>
 	<section class="skills">
 		<h3>Experiencia y Habilidades</h3>
-		<article ng-repeat="skill in result.skills">
+		<article ng-repeat="skill in skills">
 			<i class="fa fa-{{skill.icon}}"></i>
 			<h4>{{skill.description | capitalize}}</h4>
 			<div ng-repeat="habilidad in skill.habilidades">

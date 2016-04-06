@@ -2,12 +2,7 @@
   angular.module('biografia.controllers', [])
     .controller('MainController', ['$http', '$scope','$location','$stateParams', function ($http,$scope,$location,$stateParams) {
    // if($scope.result == undefined){
-        // $http.get('/js/data.json').then(
-        //   function(data){
-        //     $scope.result = data.data;
-        //     console.log(data)
-        //   },
-        //   function(data){})
+       
         $http.get('/data/modulos').then(
           function(data){
             $scope.modules = data.data;
@@ -90,12 +85,19 @@
 }])
 .controller('AboutmeController',['$http','$scope',function($http,$scope){
 
-   $http.get('/data/time-line').then(function(data){
+    $scope.result={};
+   $http.get('/data/time-line')
+      .then(function(data){
            
-      $scope.result={};
-      $scope.result.timeline =  data.data;
-            console.log(data)
-          }, function(data){})
+          $scope.All_timeline =  data.data;
+          console.log(data)
+      }, function(data){});
+   $http.get('/js/data.json').then(
+      function(data){
+      $scope.skills = data.data.skills;
+      //  console.log(data.data.skills)
+      },
+      function(data){})
           
 }])
 .controller('ContactController',['$scope',function($scope){
