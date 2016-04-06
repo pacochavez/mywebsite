@@ -4,7 +4,7 @@
 		<article ng-repeat="timeline in All_timeline | orderBy:'-year'">
 			<div class="year">{{timeline.year}}</div>
 			<div class="content">
-				<p ng-class="{left:check(X) == 0}"ng-repeat="description in timeline.descriptions | orderBy:'order'">
+				<p ng-repeat="description in timeline.descriptions | orderBy:'order'" ng-class="{left: leftClass(LEFT)}">
 					<i class="fa fa-{{description.icon}}"></i><br>
 					{{description.history}}
 				</p>

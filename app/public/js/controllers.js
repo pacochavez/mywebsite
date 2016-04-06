@@ -12,12 +12,7 @@
           
         
      // }
-    $scope.X = 1;
-    $scope.check =function(x){
-      if(x == 1){x=0;}else{x=1;}
-      $scope.X = x;
-      return x;
-    }
+    
      
 
     }])
@@ -84,19 +79,25 @@
     }  
 }])
 .controller('AboutmeController',['$http','$scope',function($http,$scope){
+  if($scope.All_timeline == undefined){
 
+    $scope.LEFT = true;
    $http.get('/data/time-line')
       .then(function(data){
            
           $scope.All_timeline =  data.data;
-          console.log(data)
       }, function(data){});
-   $http.get('/js/data.json').then(
-      function(data){
-      $scope.skills = data.data.skills;
-      //  console.log(data.data.skills)
-      },
-      function(data){})
+     $http.get('/js/data.json').then(
+         function(data){
+          console.log(data)
+         $scope.skills = data.data.skills;
+         },      function(data){})
+  }
+      
+    $scope.leftClass = function(x){
+        $scope.LEFT = !x
+        return $scope.LEFT;
+    }
           
 }])
 .controller('ContactController',['$scope',function($scope){
