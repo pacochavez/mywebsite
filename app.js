@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/app/public'));
 app.get('/admin', modulos.home);
 app.get('/portfolio', modulos.home);
 app.get('/contact', modulos.home);
-app.get('/data/:data',modulos.findAll)
+app.get('/data/:data',modulos.findAll);
 app.get('/', modulos.home);
 app.get('/about-me', modulos.home);
 app.get('/modulos', modulos.findAll);
