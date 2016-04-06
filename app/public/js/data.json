@@ -33,9 +33,9 @@
 		},
 		{"description":"desarrollo web", "icon":"code",
 			"habilidades":[
-				{"description":"html5", "porcentaje":"100"},
-				{"description":"css", "porcentaje":"100"},
-				{"description":"php", "porcentaje":"90"},
+				{"description":"HTML", "porcentaje":"100"},
+				{"description":"CSS", "porcentaje":"100"},
+				{"description":"PHP", "porcentaje":"90"},
 				{"description":"wordpress", "porcentaje":"90"},
 				{"description":"magento", "porcentaje":"80"},
 				{"description":"javascript", "porcentaje":"100"},
