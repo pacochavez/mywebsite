@@ -23,12 +23,12 @@ var loadData = function(data){
             break;
         case 'modulos':
             name = 'modules';
-            query ={name:1,link:1,active:1,order:1}
-            condicion ={active:1,status:'public'}
+            query ={name:1,link:1,active:1,order:1};
+            condicion ={active:1,status:'public'};
             break;
         case 'time-line':
             name = 'timeline';
-            query ={year:1,descriptions:1,icon:1}
+            query ={year:1,descriptions:1,icon:1};
             break;
     }
     return {
@@ -70,7 +70,7 @@ exports.findById = function(req, res) {
 exports.findAll = function(req, res) {
     var id = req.params.data;
     var data = loadData(id);
-   
+   console.log(data)
     db.collection(data.name, function(err, collection) {
          collection.find(data.condicion,data.query).toArray(function(err, items) {
              res.send(items);
