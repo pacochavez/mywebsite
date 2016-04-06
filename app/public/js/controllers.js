@@ -85,7 +85,6 @@
 }])
 .controller('AboutmeController',['$http','$scope',function($http,$scope){
 
-    $scope.result={};
    $http.get('/data/time-line')
       .then(function(data){
            
