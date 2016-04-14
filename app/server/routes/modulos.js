@@ -30,6 +30,12 @@ var loadData = function(data){
             name = 'timeline';
             query ={year:1,descriptions:1,icon:1};
             break;
+        case 'portfolio':
+            name = 'portfolio';
+            break;
+        case 'used_skills':
+            name = 'used_skills';
+            break;
     }
     return {
         name:name,
@@ -143,3 +149,5 @@ exports.deleteModulo = function(req, res) {
         });
     });
 }
+
+

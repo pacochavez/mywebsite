@@ -1,0 +1,97 @@
+body
+	.main
+		.portafolio
+			text-align center
+			& > ul
+				display block
+				padding 0px
+				li
+					background gris_medio
+					display inline-block
+					list-style none
+					width 30px
+					height 30px
+					border-radius 15px
+					margin 2px
+					transition all 0.4s ease-in-out
+					a
+						display block
+						color icon_timeline
+						height 100%
+						text-decoration none
+						i
+							display inline-block
+							vertical-align middle
+						&::before
+							content ""
+							height 100%
+							width 0px
+							display inline-block
+							vertical-align middle
+					&:hover
+						background amarillo
+					
+						a
+							color white
+							
+			article
+				display inline-block
+				width 98%
+				margin 1% 
+				padding-bottom 10px
+				border-bottom solid 1px gris_medio
+				h3
+					text-align center
+					a
+						color gris_medio
+						text-decoration none
+				a
+					display block
+					position relative
+					color white
+					i
+						font-size 5em
+						position absolute
+						top 50%
+						left 50%
+						margin-left -82px
+						
+					img 
+						width 100%
+				p
+					text-align left
+				ul
+					display block
+					padding 0px
+					li
+						background gris_medio
+						display inline-block
+						list-style none
+						width 30px
+						height 30px
+						border-radius 15px
+						margin 2px
+						transition all 0.4s ease-in-out
+						color icon_timeline
+						text-decoration none
+						&::before
+							content ""
+							height 100%
+							width 0px
+							display inline-block
+							vertical-align middle
+						i
+							display inline-block
+							vertical-align middle
+@media screen and (min-width: 600px)
+	body
+		.main
+			.portafolio
+				article
+					width 48%
+@media screen and (min-width: 800px)
+	body
+		.main
+			.portafolio
+				article
+					width 30%

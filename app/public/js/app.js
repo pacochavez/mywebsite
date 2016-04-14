@@ -31,7 +31,8 @@
 
         .state('portfolio', {
             url: '/portfolio',
-            templateUrl: '/views/portafolio.html'
+            templateUrl: '/views/portafolio.html',
+            controller:'PortfolioController'
         })
         .state('contact', {
             url: '/contact',
@@ -46,5 +47,14 @@
       $locationProvider.html5Mode(true);
         
   });
+  function footerTop(){
+    var container = document.getElementsByClassName("container")[0];
+    var rec = container.getBoundingClientRect()
+    if(rec.height < window.outerHeight){
+        container.style.minHeight = (window.outerHeight-296) + "px"
+    }
+  }
+  footerTop();
+  window.onresize = footerTop;
 
 })();
