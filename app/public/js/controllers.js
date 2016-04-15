@@ -82,26 +82,10 @@
     }  
 }])
 .controller('AboutmeController',['$http','$scope',function($http,$scope){
-  // if($scope.All_timeline == undefined){
-
-  //  $http.get('/data/time-line')
-  //     .then(function(data){
-           
-  //         $scope.All_timeline =  data.data;
-  //     }, function(data){});
-  //    $http.get('/js/data.json').then(
-  //        function(data){
-  //         console.log(data)
-  //        $scope.skills = data.data.skills;
-  //        },      function(data){})
-  // }
-      
     $scope.LEFT = true;
-    $scope.leftClass = function(x){
-        //$scope.LEFT = !x
+    $scope.leftClass = function(){
         return $scope.LEFT = !$scope.LEFT;
-    }
-          
+    }   
 }])
 
 .controller('ContactController',['$scope',function($scope){
