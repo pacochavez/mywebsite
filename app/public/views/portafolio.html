@@ -7,14 +7,14 @@
 				</a>
 			</li>
 		</ul>
-		<article ng-repeat="work in result.portfolio | filter:fSkill">
+		<article  class="works" ng-repeat="work in result.portfolio | filter:fSkill">
 			<h3><a href="{{work.link}}"></a>{{work.title}}</h3>
 			<a href="{{work.link}}" target="_blank">
 				<img ng-src="{{img_source(work.img)}}" alt="{{work.title}}">
 			</a>
 			<p>{{work.description}}</p>	
 			<ul>
-				<li ng-repeat="skill in work.used_skills">
+				<li ng-repeat="skill in work.used_skills" class="{{skill.icon}}">
 					<i class="fa fa-{{skill.icon}}"></i>
 				</li>
 			</ul>

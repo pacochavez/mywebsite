@@ -103,8 +103,7 @@ short_description:{
 portafolio insert
 
 > 
-db.portfolio.insert({title:"Developed autocenter costa",img:"",description:"front-end and back-end development of auto center costa website.
-",link:"http://autocentercosta.com/",used_skills:[{skill:"web development",icon:"code"]},{skill:"database",icon:"database"]},{skill:"design",icon:"paint-brush"]});
+db.portfolio.insert({title:"Developed autocenter costa",img:"",description:"front-end and back-end development of auto center costa website.",link:"http://autocentercosta.com/",used_skills:[{skill:"web development",icon:"code"},{skill:"database",icon:"database"},{skill:"design",icon:"paint-brush"}]});
 
 db.used_skills.insert({skill:"web development",icon:"code"})
 db.used_skills.createIndex({skill:1},{unique:true})

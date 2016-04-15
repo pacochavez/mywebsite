@@ -5,12 +5,33 @@
 @keyframes scaleUp {
     from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
-.ng-enter
-	width 100%
-	animation scaleUp 0.5s both ease-in
-	z-index 8888
-	position absolute
-.ng-leave
-	animation slideOutLeft 0.5s both ease-in
-	z-index 9999
-	position relative
+@keyframes worksOutLeft {
+   to {opacity: 1;-webkit-transform: scale(0);}
+  from {opacity: 0; -webkit-transform: scale(1);}
+ 
+}
+@keyframes worksUpLeft {
+   to {opacity: 1;-webkit-transform: scale(1);}
+  from {opacity: 0; -webkit-transform: scale(0);}
+}
+.animate-view
+	background white
+	&.ng-enter
+		width 100%
+		animation scaleUp 0.5s both ease-in
+		z-index 8888
+		position absolute
+	&.ng-leave
+		animation slideOutLeft 0.5s both ease-in
+		z-index 9999
+		position relative
+.works
+	&.ng-enter
+		width 100%
+		animation worksUpLeft 0.5s both ease-in
+		z-index 8888
+		position relative
+	&.ng-leave
+		animation worksOutLeft 0.5s both linear
+		z-index 9999
+		position relative

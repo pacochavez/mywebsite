@@ -50,7 +50,7 @@ html(ng-app='biografia',ng-controller='MainController')
 						li(ng-repeat="module in result.modules | orderBy:'order'")
 							a(ui-sref='{{module.link}}', ui-sref-active='active') {{module.name}}
 			.container
-				div(ui-view='')
+				div(class="animate-view" ui-view='')
 		footer
 			div.wrapper
 				div
