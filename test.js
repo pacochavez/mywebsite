@@ -105,4 +105,108 @@ db.portfolio.insert([
 ])
 db.used_skills.insert([{skill : "web development",icon : "code" },{skill : "design",icon : "paint-brush" },{skill : "database",icon : "database" }]);
 
+db.modules.insert([{
+	"active" : 1,
+	"card_types" : "summary",
+	"description" : "Hello I'm Paco Chávez Front-end and Back-end developer and UI designer",
+	"image_url" : "http://pacochavez.mx/img/about-me.jpg",
+	"link" : "about-me",
+	"locale" : "en",
+	"modified_time" : "2016-04-02T01:43:00.480Z",
+	"name" : "About me",
+	"order" : 1,
+	"published_time" : "2016-04-02T01:43:00.480Z",
+	"section" : "about me",
+	"site_name" : "Paco Chávez",
+	"status" : "public",
+	"title" : "Paco Chávez Front-end and Back-end developer and UI designer",
+	"twitter_creator" : "@pacochavez",
+	"type" : "website",
+	"updated_time" : "2016-04-02T01:43:00.480Z",
+	"url" : "http://pacochavez.mx"
+},{
+	"active" : 1,
+	"card_types" : "summary",
+	"description" : "That is what I know about web design and development",
+	"image_url" : "http://pacochavez.mx/img/portfolio.jpg",
+	"link" : "portfolio",
+	"locale" : "en_us",
+	"modified_time" : "2016-04-04T17:03:27.828Z",
+	"name" : "Portfolio",
+	"order" : 2,
+	"published_time" : "2016-04-04T17:03:27.828Z",
+	"section" : "portfolio",
+	"site_name" : "Paco Chávez",
+	"status" : "public",
+	"title" : "Portfolio Paco Chávez",
+	"twitter_creator" : "@pacochavez",
+	"type" : "website",
+	"updated_time" : "2016-04-04T17:03:27.828Z",
+	"url" : "http://pacochavez.mx/portfolio"
+},{
+	"active" : 0,
+	"card_types" : "summary",
+	"description" : "technology , food, art , and many nice things to share with you",
+	"image_url" : "http://pacochavez.mx/blog.jpg",
+	"link" : "blog",
+	"locale" : "en_us",
+	"modified_time" : "2016-04-04T16:51:14.480Z",
+	"name" : "Blog",
+	"order" : 3,
+	"published_time" : "2016-04-04T16:51:14.480Z",
+	"section" : "Blog",
+	"site_name" : "Paco Chávez",
+	"status" : "public",
+	"title" : "Blog, Paco Chávez",
+	"twitter_creator" : "@pacochavez",
+	"type" : "blog",
+	"updated_time" : "2016-04-04T16:51:14.480Z",
+	"url" : "http://pacochavez.mx/blog"
+},{
+	"active" : 1,
+	"card_types" : "summary",
+	"description" : "Are you looking for a Front-end developer? Contact me",
+	"image_url" : "http://pacochavez.mx/contacto-paco-chavez.jpg",
+	"link" : "contact",
+	"locale" : "en_us",
+	"modified_time" : "2016-04-04T16:56:50.792Z",
+	"name" : "Contact",
+	"order" : 4,
+	"published_time" : "2016-04-04T16:56:50.792Z",
+	"section" : "Contact",
+	"site_name" : "Paco Chavez",
+	"status" : "public",
+	"title" : "Contact with Paco Chávez",
+	"twitter_creator" : "@pacochavez",
+	"type" : "website",
+	"updated_time" : "2016-04-04T16:56:50.792Z",
+	"url" : "http://pacochavez.mx/contacto"
+}
+]);
+
+
+
+
+
+db.portfolio.insert(
+{
+	title : "Development Web",
+	img : "/img/portfolio/front-end-kids-and-english.jpg",
+	description : "Development  Website for Kids And English",
+	link : "http://kidsandenglish.com/course",
+	used_skills : [
+		{
+			skill : "web development",
+			icon : "code"
+		},
+		{
+			skill : "design",
+			icon : "paint-brush"
+		},
+		{
+			skill : "database",
+			icon : "database"
+		}
+	]
+})
 
