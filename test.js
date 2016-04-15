@@ -210,3 +210,66 @@ db.portfolio.insert(
 	]
 })
 
+db.skills.insert([
+		{"description":"Education", "icon":"institution",
+			"habilidades":[
+				{"description":"Digital graphic design engineering ITESUS", "porcentaje":"90"}	
+			]
+		},{"description":"Web Development", "icon":"code",
+			"habilidades":[
+				{"description":"HTML", "porcentaje":"100"},
+				{"description":"CSS", "porcentaje":"100"},
+				{"description":"PHP", "porcentaje":"100"},
+				{"description":"wordpress", "porcentaje":"100"},
+				{"description":"magento", "porcentaje":"100"},
+				{"description":"javascript", "porcentaje":"100"},
+				{"description":"nodejs", "porcentaje":"90"},
+				{"description":"express", "porcentaje":"100"},
+				{"description":"socket io", "porcentaje":"90"},
+				{"description":"Angularjs", "porcentaje":"100"},
+				{"description":"jquery", "porcentaje":"100"}
+			]
+		},{"description":"Database", "icon":"database",
+			"habilidades":[
+				{"description":"mysql", "porcentaje":"100"},
+				{"description":"sqlite", "porcentaje":"100"},
+				{"description":"mongodb", "porcentaje":"90"}
+			]
+		},{"description":"Design", "icon":"paint-brush",
+			"habilidades":[
+				{"description":"UI", "porcentaje":"100"},
+				{"description":"UX", "porcentaje":"90"},
+				{"description":"Web", "porcentaje":"90"},
+				{"description":"Advertising", "porcentaje":"80"},
+				{"description":"Editorial", "porcentaje":"40"},
+				{"description":"Branding And Identity ", "porcentaje":"70"},
+				{"description":"Animation", "porcentaje":"90"}
+			]
+		},{"description":"Softwares", "icon":"desktop",
+			"habilidades":[
+				{"description":"Ilustrator", "porcentaje":"100"},
+				{"description":"Photoshop", "porcentaje":"90"},
+				{"description":"Gimp", "porcentaje":"80"},
+				{"description":"Inkscape", "porcentaje":"80"},
+				{"description":"sublime text", "porcentaje":"100"},
+				{"description":"android estudio", "porcentaje":"70"},
+				{"description":"eclipse", "porcentaje":"80"},
+				{"description":"xcode", "porcentaje":"100"}
+			]
+		},{"description":"Version Control", "icon":"code-fork",
+			"habilidades":[
+				{"description":"git", "porcentaje":"100"},
+				{"description":"svn", "porcentaje":"80"},
+				{"description":"github", "porcentaje":"100"},
+				{"description":"gitlab", "porcentaje":"100"}
+			]
+		},{"description":"OS", "icon":"cogs",
+			"habilidades":[
+				{"description":"osx", "porcentaje":"90"},
+				{"description":"windows", "porcentaje":"80"},
+				{"description":"ubuntu", "porcentaje":"100"},
+				{"description":"centos", "porcentaje":"80"}
+			]
+		}
+	]);
+

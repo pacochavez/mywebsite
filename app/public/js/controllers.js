@@ -3,10 +3,13 @@
     .controller('MainController', ['$http', '$scope','$location','$stateParams', function ($http,$scope,$location,$stateParams) {
    // if($scope.result == undefined){
        
-        $http.get('/data/modulos').then(
+        $http.get('/page/').then(
           function(data){
-            $scope.modules = data.data;
-            console.log(data)
+            if(data){
+              $scope.result = data.data;
+              $scope.showAll = true;
+            }
+            
           },
           function(data){})
           
@@ -79,24 +82,24 @@
     }  
 }])
 .controller('AboutmeController',['$http','$scope',function($http,$scope){
-  if($scope.All_timeline == undefined){
+  // if($scope.All_timeline == undefined){
 
-    $scope.LEFT = true;
-   $http.get('/data/time-line')
-      .then(function(data){
+  //  $http.get('/data/time-line')
+  //     .then(function(data){
            
-          $scope.All_timeline =  data.data;
-      }, function(data){});
-     $http.get('/js/data.json').then(
-         function(data){
-          console.log(data)
-         $scope.skills = data.data.skills;
-         },      function(data){})
-  }
+  //         $scope.All_timeline =  data.data;
+  //     }, function(data){});
+  //    $http.get('/js/data.json').then(
+  //        function(data){
+  //         console.log(data)
+  //        $scope.skills = data.data.skills;
+  //        },      function(data){})
+  // }
       
+    $scope.LEFT = true;
     $scope.leftClass = function(x){
-        $scope.LEFT = !x
-        return $scope.LEFT;
+        //$scope.LEFT = !x
+        return $scope.LEFT = !$scope.LEFT;
     }
           
 }])
@@ -108,21 +111,21 @@
 
 }])
 .controller('PortfolioController',['$scope','$http',function($scope,$http){
-   $http.get('/data/portfolio')
-      .then(function(data){
-          $scope.portfolio =  data.data;
-      }, function(data){});
-    $http.get('/data/used_skills')
-      .then(function(data){
-          $scope.used_skills =  data.data;
-      }, function(data){});
+   // $http.get('/data/portfolio')
+   //    .then(function(data){
+   //        $scope.portfolio =  data.data;
+   //    }, function(data){});
+   //  $http.get('/data/used_skills')
+   //    .then(function(data){
+   //        $scope.used_skills =  data.data;
+   //    }, function(data){});
       
       $scope.fSkill ={}
 
-      $scope.selectSkill = function(skill){
+      $scope.selectSkill = function(skill,used_skills){
       $scope.skillSelected = skill;
       $scope.fSkill ={used_skills :[]}
-        for(var us in $scope.used_skills ){
+        for(var us in used_skills ){
           $scope.fSkill.used_skills[us] = {icon : skill};  
         }
       }

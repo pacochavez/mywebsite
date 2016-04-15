@@ -1,10 +1,10 @@
 <div class="main pane-left">
 	<h2>About me</h2>
 	<section>
-		<article ng-repeat="timeline in All_timeline | orderBy:'-year'">
+		<article ng-repeat="timeline in result.timeline | orderBy:'-year'">
 			<div class="year">{{timeline.year}}</div>
 			<div class="content">
-				<p ng-repeat="description in timeline.descriptions | orderBy:'order'" ng-class="{left: leftClass(LEFT)}">
+				<p ng-repeat="description in timeline.descriptions | orderBy:'order'" ng-class="{left: leftClass()}">
 					<i class="fa fa-{{description.icon}}"></i><br>
 					{{description.history}}
 				</p>
@@ -25,7 +25,7 @@
 	</section>
 	<section class="skills">
 		<h3>Skills</h3>
-		<article ng-repeat="skill in skills">
+		<article ng-repeat="skill in result.skills">
 			<i class="fa fa-{{skill.icon}}"></i>
 			<h4>{{skill.description | capitalize}}</h4>
 			<div ng-repeat="habilidad in skill.habilidades">

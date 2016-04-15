@@ -83,6 +83,57 @@ exports.findAll = function(req, res) {
          });
      });
 };
+exports.findPage = function(req, res) {
+    var pages = ["modules","portfolio","skills","timeline","used_skills"];
+
+    var result = {}
+    var a = 0
+        db.collection(pages[0], function(err, collection) {
+            collection.find({active:1,status:"public"}).toArray(function(err, items) {
+                if(items){
+                    result[pages[0]] =items; 
+                    db.collection(pages[1], function(err, collection) {
+                        collection.find().toArray(function(err, items) {
+                             if(items){
+                                result[pages[1]] = items;  
+                                // console.log(result);
+                                db.collection(pages[2], function(err, collection) {
+                                    collection.find().toArray(function(err, items) {
+                                             if(items){
+                                                result[pages[2]] = items;  
+                                                // console.log(result);
+                                                db.collection(pages[3], function(err, collection) {
+                                                    collection.find().toArray(function(err, items) {
+                                                         if(items){
+                                                            result[pages[3]] = items;  
+                                                            // console.log(result);
+                                                            db.collection(pages[4], function(err, collection) {
+                                                                collection.find().toArray(function(err, items) {
+                                                                    if(items){
+                                                                        result[pages[4]] = items;  
+                                                                        console.log(items);
+                                                                        //console.log(result);    
+                                                                        res.send(result);
+                                                                     }
+                                                                });
+                                                            });  
+                                                         }
+                                                    });
+                                                });    
+                                           
+                                             }
+                                        });
+                                    });    
+                                
+                             }
+                        });
+                    });    
+                }
+            });
+        });    
+                 
+    
+};
 
 var form_name = function(name){
     var collection_name;

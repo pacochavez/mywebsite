@@ -1,13 +1,13 @@
 <div class="main">
 	<section class="portafolio">
 		<ul>
-			<li ng-class="{selected:skill.icon==skillSelected}"class="{{skill.icon}}" ng-repeat="skill in used_skills" ng-click="selectSkill(skill.icon)">
+			<li ng-class="{selected:skill.icon==skillSelected}"class="{{skill.icon}}" ng-repeat="skill in result.used_skills" ng-click="selectSkill(skill.icon,result.used_skills)">
 				<a href="#">
 					<i class="fa fa-{{skill.icon}}"></i>
 				</a>
 			</li>
 		</ul>
-		<article ng-repeat="work in portfolio | filter:fSkill">
+		<article ng-repeat="work in result.portfolio | filter:fSkill">
 			<h3><a href="{{work.link}}"></a>{{work.title}}</h3>
 			<a href="{{work.link}}" target="_blank">
 				<img ng-src="{{img_source(work.img)}}" alt="{{work.title}}">

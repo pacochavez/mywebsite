@@ -4,6 +4,22 @@
 @import('profile')
 @import('contact')
 body
+	.loader
+		background white
+		z-index 99999
+		position absolute
+		height 100%
+		width 100%
+		top 0px
+		left 0px
+		text-align center
+		font-size 5em
+		&::before
+			content ""
+			display inline-block
+			vertical-align middle
+			width 0px
+			height 100%
 	background white
 	color gris_oscuro
 	.wrapper
