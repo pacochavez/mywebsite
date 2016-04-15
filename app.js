@@ -20,7 +20,7 @@ app.get('/about-me', modulos.home);
 app.get('/data/:data',modulos.findAll);
 
 
-app.get('/page/:data',modulos.findPage);
+//app.get('/page/:data',modulos.findPage);
 
 app.get('/modulos', modulos.findAll);
 app.get('/modulos/:id', modulos.findById);
