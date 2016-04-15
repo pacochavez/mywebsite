@@ -1,7 +1,7 @@
 <div class="main">
 	<section class="portafolio">
 		<ul>
-			<li ng-repeat="skill in used_skills" ng-click="selectSkill(skill.icon)">
+			<li ng-class="{selected:skill.icon==skillSelected}"class="{{skill.icon}}" ng-repeat="skill in used_skills" ng-click="selectSkill(skill.icon)">
 				<a href="#">
 					<i class="fa fa-{{skill.icon}}"></i>
 				</a>

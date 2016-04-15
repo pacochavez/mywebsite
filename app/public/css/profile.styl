@@ -9,11 +9,22 @@ body
 					background gris_medio
 					display inline-block
 					list-style none
-					width 30px
-					height 30px
-					border-radius 15px
+					width 50px
+					height 50px
+					border-radius 25px
 					margin 2px
+					font-size 20px
 					transition all 0.4s ease-in-out
+					&.selected,&:hover
+						background amarillo
+						a
+							color white
+						&.code
+							background azul
+						&.paint-brush
+							background naranja
+						&.database
+							background verde
 					a
 						display block
 						color icon_timeline
@@ -28,18 +39,13 @@ body
 							width 0px
 							display inline-block
 							vertical-align middle
-					&:hover
-						background amarillo
-					
-						a
-							color white
-							
 			article
 				display inline-block
 				width 98%
 				margin 1% 
 				padding-bottom 10px
 				border-bottom solid 1px gris_medio
+				vertical-align top
 				h3
 					text-align center
 					a
@@ -61,9 +67,11 @@ body
 				p
 					text-align left
 				ul
+					text-align right
 					display block
 					padding 0px
 					li
+						text-align center
 						background gris_medio
 						display inline-block
 						list-style none

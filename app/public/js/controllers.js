@@ -116,16 +116,15 @@
       .then(function(data){
           $scope.used_skills =  data.data;
       }, function(data){});
+      
       $scope.fSkill ={}
+
       $scope.selectSkill = function(skill){
+      $scope.skillSelected = skill;
       $scope.fSkill ={used_skills :[]}
-
         for(var us in $scope.used_skills ){
-
           $scope.fSkill.used_skills[us] = {icon : skill};  
         }
-
-        
       }
       //$scope.selectSkill("");      
       $scope.img_source = function(name){
