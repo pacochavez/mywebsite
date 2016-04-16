@@ -12,7 +12,7 @@ app.set('views', __dirname + '/app/server/views');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/app/public'));
 
-app.get('/admin', modulos.home);
+//app.get('/admin', modulos.home);
 app.get('/portfolio', modulos.home);
 app.get('/contact', modulos.home);
 app.get('/', modulos.home);
