@@ -1,0 +1,11 @@
+User-agent:*
+Disallow:/css
+Disallow:/js
+Disallow:/views
+Disallow:/fonts
+Disallow:/icons
+
+Allow:/about-me
+Allow:/contact
+Allow:/portfolio
+Allow:/blog
