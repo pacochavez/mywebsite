@@ -1,5 +1,4 @@
 (function () {
-
   angular.module('biografia.filters', [])
     .filter('capitalize', function () {
       return function (input) {

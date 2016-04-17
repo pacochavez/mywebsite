@@ -20,7 +20,7 @@
     $stateProvider
         // .state('inicio', {
         //     url: '/',
-        //     templateUrl: '/views/inicio.html',
+        //     templateUrl: '/views/x|inicio.html',
         //     controller:'AboutmeController'  
         // }) 
         .state('about-me', {
@@ -47,14 +47,14 @@
       $locationProvider.html5Mode(true);
         
   });
-  function footerTop(){
-    var container = document.getElementsByClassName("container")[0];
-    var rec = container.getBoundingClientRect()
-    if(rec.height < window.outerHeight){
-        container.style.minHeight = (window.outerHeight-296) + "px"
-    }
-  }
-  footerTop();
-  window.onresize = footerTop;
+  // function footerTop(){
+  //   var container = document.getElementsByClassName("container")[0];
+  //   var rec = container.getBoundingClientRect()
+  //   if(rec.height < window.outerHeight){
+  //       container.style.minHeight = (window.outerHeight-296) + "px"
+  //   }
+  // }
+  // footerTop();
+  // window.onresize = footerTop;
 
 })();

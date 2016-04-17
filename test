@@ -61,6 +61,47 @@ Articulos Blog:{
 	}
 }
 
+
+
+
+<meta property="og:locale" content="es_MX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Paco Chávez Front-end and Back-end developer and UI designer">
+<meta property="og:description" content="Hello I'm Paco Chávez Front-end and Back-end developer and UI designer">
+<meta property="og:url" content="http://pacochavez.mx/about-me">
+<meta property="og:site_name" content="Paco Chávez">
+<meta property="article:section" content="Front end On-Page">
+<meta property="og:image" content="http://pacochavez.mx/img/paco-chavez-front-end-javascript-css-html.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Tienes ante ti la solución definitiva a todos tus problemas de SEO: Las etiquetas meta, o como se conocen en inglés, meta tags. Si quieres mejorar tu posicionamiento en Google, Bing, o cualquier otro buscador, no tienes más que añadir unas cuantas etiquetas meta a tus páginas y tu sitio ascenderá en los rankings como […]">
+<meta name="twitter:title" content="Paco Chávez Front-end and Back-end developer and UI designer">
+<meta name="twitter:site" content="@pacochavez">
+<meta name="twitter:image" content="http://pacochavez.mx/img/paco-chavez-front-end-javascript-css-html.jpg">
+<meta name="twitter:creator" content="@pacochavez">
+
+"active" : 1,
+	"card_types" : "summary",
+	"description" : "Hello I'm Paco Chávez Front-end and Back-end developer and UI designer",
+	"image_url" : "http://pacochavez.mx/img/about-me.jpg",
+	"link" : "about-me",
+	"locale" : "en",
+	"modified_time" : "2016-04-02T01:43:00.480Z",
+	"name" : "About me",
+	"order" : 1,
+	"published_time" : "2016-04-02T01:43:00.480Z",
+	"section" : "about me",
+	"site_name" : "Paco Chávez",
+	"status" : "public",
+	"title" : "Paco Chávez Front-end and Back-end developer and UI designer",
+	"twitter_creator" : "@pacochavez",
+	"type" : "website",
+	"updated_time" : "2016-04-02T01:43:00.480Z",
+	"url" : "http://pacochavez.mx"
+
+
+
+
 //timeline
 timeline:[
 	{
