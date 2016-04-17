@@ -145,7 +145,7 @@ body
 						text-align center
 					section
 						article
-							text-align center
+							text-align left
 							&:nth-child(odd)
 								.year
 									background verde
@@ -179,13 +179,20 @@ body
 									border solid transparent 30px
 									border-top  17px solid gris_oscuro
 							.content
-								width 100%
 								vertical-align top		
-								text-align center		
+								text-align left		
 								display block
+								border-left solid 1px gris_medio
+								padding 10px 0 10px 10px
+								margin-left 29px
 								p
-									text-align center
+									text-align left
+									position relative
+									padding-left 10px
 									i
+										position absolute
+										top 0px
+										left -29px
 										content ""
 										background gris_medio
 										color icon_timeline
