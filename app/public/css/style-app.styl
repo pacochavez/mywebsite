@@ -181,14 +181,18 @@ body
 							.content
 								vertical-align top		
 								text-align left		
-								display block
 								border-left solid 1px gris_medio
 								padding 10px 0 10px 10px
 								margin-left 29px
+								display block
 								p
+									display none
 									text-align left
 									position relative
 									padding-left 10px
+									&.active
+										display block
+										animation worksUpLeft 0.5s both ease-in
 									i
 										position absolute
 										top 0px
