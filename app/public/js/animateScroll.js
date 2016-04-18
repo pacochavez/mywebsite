@@ -15,3 +15,4 @@ var AnimateElements =function(){
 			}
 		}
 }
+AnimateElements();
