@@ -1,6 +1,6 @@
 <div class="main pane-left">
 	<h2>About me</h2>
-	<section>
+	<section onload="AnimateElements()">
 		<article ng-repeat="timeline in result.timeline | orderBy:'-year'">
 			<div class="year">{{timeline.year}}</div>
 			<div class="content">
