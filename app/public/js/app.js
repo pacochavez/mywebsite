@@ -14,7 +14,7 @@
        // var top = uiViewElement.getBoundingClientRect().top;
         window.scrollTo(0, (top - 30));
        // Or some other custom behaviour...
-     }; 
+     };
    });
    
     $stateProvider
